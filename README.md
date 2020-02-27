@@ -4,10 +4,10 @@
 @email => olakehinde59@gmail.com
 
 # Problem:
-• An application for billing 10,000 users over a given billing API (owned by a third
+An application for billing 10,000 users over a given billing API (owned by a third
 party e.g. Telco/Bank).
-• The billing API takes 1.6secs to process and respond to each request
-• The details of the users to bill is stored in a Database with fields; id, username, 
+The billing API takes 1.6secs to process and respond to each request
+The details of the users to bill is stored in a Database with fields; id, username, 
 mobile_number and amount_to_bill
 
 # Requirements:
@@ -19,5 +19,5 @@ Also suggest an approach to scale the above if you need to bill 100,000 users wi
 # Description of Solution
 This operation is a resource heavy request, so it is advisable to use stored procedures (or cron jobs) and functions. 
 It will optimize the speed and time complexity to upto 40% (or more) speed in data searching and fetching records. 
-
+The speed and time complexity optimization also depends on the DB architecture, for example if the DB query require the use of join statement, then it is better to use index. 
 Another option is to optimize the php code by reducing the use of loops.
